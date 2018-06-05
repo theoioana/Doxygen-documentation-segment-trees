@@ -1,0 +1,74 @@
+\section{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.h File Reference}
+\label{query__and__update__tree_8h}\index{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.\+h@{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.\+h}}
+
+
+C header for the operations done on the segment tree.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ query\+\_\+and\+\_\+update\+\_\+tree} (int nod, int left, int right, int nr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C header for the operations done on the segment tree. 
+
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\label{query__and__update__tree_8h_a62124276d9fe31321535cff2b2de75d8}} 
+\index{query\+\_\+and\+\_\+update\+\_\+tree.\+h@{query\+\_\+and\+\_\+update\+\_\+tree.\+h}!query\+\_\+and\+\_\+update\+\_\+tree@{query\+\_\+and\+\_\+update\+\_\+tree}}
+\index{query\+\_\+and\+\_\+update\+\_\+tree@{query\+\_\+and\+\_\+update\+\_\+tree}!query\+\_\+and\+\_\+update\+\_\+tree.\+h@{query\+\_\+and\+\_\+update\+\_\+tree.\+h}}
+\subsubsection{query\+\_\+and\+\_\+update\+\_\+tree()}
+{\footnotesize\ttfamily int query\+\_\+and\+\_\+update\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{nod,  }\item[{int}]{left,  }\item[{int}]{right,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+child} & formula for accesing the left child of the node \\
+\hline
+{\em right\+\_\+child} & formula for accesing the right child of the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. This function calculates returns initial position of the child to be eliminated at a certain step and accordingly updates and queries the segment tree 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & will represent the node we start to make the two operations of update and query \\
+\hline
+{\em left} & will represent the left bound of the interval to be querried and updated \\
+\hline
+{\em right} & will represent the right bound of the interval to be querried and updated \\
+\hline
+{\em position} & will represent the position of the searched child \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+the case we have an interval of length 1
+
+if there are enough children in the left half go look for the searched child in this half
+
+otherwise go look for the searched child in the remaining right half
+
+do the correspondent update at the node
+
+return the initial position of the child that is eliminated at a certain step 
+
+Definition at line 35 of file query\+\_\+and\+\_\+update\+\_\+tree.\+c.
+

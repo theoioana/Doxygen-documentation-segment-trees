@@ -1,0 +1,64 @@
+\section{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/build\+\_\+tree.h File Reference}
+\label{build__tree_8h}\index{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/build\+\_\+tree.\+h@{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/build\+\_\+tree.\+h}}
+
+
+C header for initializing the segment tree.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ build\+\_\+tree} (int nod, int left, int right)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C header for initializing the segment tree. 
+
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\label{build__tree_8h_ace4ed0b689ea9112cab2b746e67c0aa8}} 
+\index{build\+\_\+tree.\+h@{build\+\_\+tree.\+h}!build\+\_\+tree@{build\+\_\+tree}}
+\index{build\+\_\+tree@{build\+\_\+tree}!build\+\_\+tree.\+h@{build\+\_\+tree.\+h}}
+\subsubsection{build\+\_\+tree()}
+{\footnotesize\ttfamily void build\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{nod,  }\item[{int}]{left,  }\item[{int}]{right }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+child} & formula for accesing the left child of the node \\
+\hline
+{\em right\+\_\+child} & formula for accesing the right child of the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. This function builds a segment tree in which a node’s information represents how many children from that node’s interval are still in the circle 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & will represent the node we start from \\
+\hline
+{\em left} & will represent the left bound of the interval to be initialized \\
+\hline
+{\em right} & will represent he right bound of the interval to be initialized \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+recursive calls of the function build\+\_\+tree for updating the left and right intervals 
+
+Definition at line 34 of file build\+\_\+tree.\+c.
+

@@ -1,0 +1,102 @@
+\section{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.c File Reference}
+\label{query__and__update__tree_8c}\index{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.\+c@{C\+:/\+Users/theod/\+Desktop/ad project/my code/\+Order-\/infoarena-\/-\/\+S\+T/query\+\_\+and\+\_\+update\+\_\+tree.\+c}}
+
+
+C library implementation that solves the problem on the support of the data generated in the segment tree.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}aint\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algorithm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}build\+\_\+tree.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ left\+\_\+child}~(nod $\ast$ 2)
+\item 
+\mbox{\label{query__and__update__tree_8c_a1a536bb5eb7c78383ef9ccdf18a20e8c}} 
+\#define {\bfseries right\+\_\+child}~(\textbf{ left\+\_\+child} $\vert$ 1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ query\+\_\+and\+\_\+update\+\_\+tree} (int nod, int left, int right, int position)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C library implementation that solves the problem on the support of the data generated in the segment tree. 
+
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{query__and__update__tree_8c_adc8ab280883a50ebb40e365db3a45f66}} 
+\index{query\+\_\+and\+\_\+update\+\_\+tree.\+c@{query\+\_\+and\+\_\+update\+\_\+tree.\+c}!left\+\_\+child@{left\+\_\+child}}
+\index{left\+\_\+child@{left\+\_\+child}!query\+\_\+and\+\_\+update\+\_\+tree.\+c@{query\+\_\+and\+\_\+update\+\_\+tree.\+c}}
+\subsubsection{left\+\_\+child}
+{\footnotesize\ttfamily \#define left\+\_\+child~(nod $\ast$ 2)}
+
+\begin{quote}
+printf() aint[30005 $\ast$ 4], vec[30005] \doxyref{function()}{p.}{algorithm_8c_ad1b279f41eec5d28d989bd73692c4efb} \doxyref{build\+\_\+tree()}{p.}{build__tree_8c_ace4ed0b689ea9112cab2b746e67c0aa8} \end{quote}
+
+
+Definition at line 14 of file query\+\_\+and\+\_\+update\+\_\+tree.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{query__and__update__tree_8c_a341eaee79fe1ceebbf4e535eb2840678}} 
+\index{query\+\_\+and\+\_\+update\+\_\+tree.\+c@{query\+\_\+and\+\_\+update\+\_\+tree.\+c}!query\+\_\+and\+\_\+update\+\_\+tree@{query\+\_\+and\+\_\+update\+\_\+tree}}
+\index{query\+\_\+and\+\_\+update\+\_\+tree@{query\+\_\+and\+\_\+update\+\_\+tree}!query\+\_\+and\+\_\+update\+\_\+tree.\+c@{query\+\_\+and\+\_\+update\+\_\+tree.\+c}}
+\subsubsection{query\+\_\+and\+\_\+update\+\_\+tree()}
+{\footnotesize\ttfamily int query\+\_\+and\+\_\+update\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{nod,  }\item[{int}]{left,  }\item[{int}]{right,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+child} & formula for accesing the left child of the node \\
+\hline
+{\em right\+\_\+child} & formula for accesing the right child of the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. This function calculates returns initial position of the child to be eliminated at a certain step and accordingly updates and queries the segment tree 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & will represent the node we start to make the two operations of update and query \\
+\hline
+{\em left} & will represent the left bound of the interval to be querried and updated \\
+\hline
+{\em right} & will represent the right bound of the interval to be querried and updated \\
+\hline
+{\em position} & will represent the position of the searched child \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Theodora Danciulescu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/05/18. 
+\end{DoxyDate}
+the case we have an interval of length 1
+
+if there are enough children in the left half go look for the searched child in this half
+
+otherwise go look for the searched child in the remaining right half
+
+do the correspondent update at the node
+
+return the initial position of the child that is eliminated at a certain step 
+
+Definition at line 35 of file query\+\_\+and\+\_\+update\+\_\+tree.\+c.
+
